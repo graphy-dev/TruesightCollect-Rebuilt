@@ -1,0 +1,67 @@
+section{
+	padding: 3rem 0;
+}
+
+footer{
+	padding: 3rem 0;
+}
+
+#hero{
+	min-height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.event{
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid $navy;
+}
+
+.event:last-child{
+	border-bottom: none;
+}
+
+
+.navybg {
+	background-color: $navy;
+	color: $peach;
+}
+
+.slatebg {
+	background-color: $slate;
+	color: $navy;
+}
+
+.peachbg {
+	background-color: $peach;
+	color: $navy;
+}
+
+.boxed{
+	padding: 2rem;
+	border-radius: 0.25rem;
+	box-shadow: 0 0 0.25rem $slate;
+}
+
+
+%full-height {
+	height: 100vh;
+	min-height: 400px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	.center-content {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+}
+
+.full-height {
+	@extend %full-height;
+}

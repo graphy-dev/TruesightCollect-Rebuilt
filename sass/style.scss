@@ -1,0 +1,124 @@
+@import 'normalize';
+@import 'bootstrap';
+
+$slate: #cdd7d6;
+$navy: #102542;
+$peach: #f87060;
+
+$obsidian: "Obsidian A", "Obsidian B", 'Helvetica', Arial, sans-serif;
+$serif: "Surveyor SSm A", "Surveyor SSm B", Georgia, "Times New Roman", serif;
+$sans: sans-serif;
+
+@mixin typesmooth() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering:optimizeLegibility;
+}
+
+@mixin border-radius($border-radius) {
+	-moz-border-radius: $border-radius;
+	-webkit-border-radius: $border-radius;
+	border-radius: $border-radius;
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value; /* Safari */
+  transition: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value; /* Safari */
+  transform: $value;
+}
+
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: $sans;
+	@include typesmooth();
+	background-color: $peach;
+	color: $navy;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+@import 'header';
+@import 'typography';
+@import 'layout';
+@import 'accordian';
+
+// Text meant only for screen readers.
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+
+.emblem {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 100;
+	width: 2rem;
+	height: auto;
+}
+
+.hero {
+	@extend %full-height;
+	height: 150vh;
+	h1 {
+		font-size: 3rem;
+		font-size: 16vw;
+		@media (min-width: 500px) {
+			font-size: 7.5rem;
+			font-size: 10vw;
+		}
+		margin-bottom: 1rem;
+	}
+	h2 {
+		font-size: 0.85rem;
+		@media (min-width: 500px) {
+			font-size: 1rem;
+		}
+	}
+	.center-content {
+		top: 30%;
+		@include transform(translateY(-30%));
+	}
+}
+
+
+
+
+
+html.sr {
+	.navbar, .lines-container, #previous-events, #other, #other .grey{
+		visibility: hidden;
+	}
+}
+
+svg{
+	max-width: 100%;
+}
+.fillnavy{fill:$navy;}
+.fillpeach{fill:$peach;}
+.fillslate{fill:$slate;}

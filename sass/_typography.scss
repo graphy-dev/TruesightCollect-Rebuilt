@@ -1,0 +1,96 @@
+h1 {
+	color: $peach;
+	font-family: $obsidian;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	@include typesmooth();
+}
+
+h2 {
+	color: $peach;
+	font-family: $obsidian;
+	font-family: $serif;
+	@include typesmooth();
+}
+
+h3 {
+	font-family: $serif;
+	@include typesmooth();
+}
+
+
+.lead{
+	font-size: 150%;
+	font-family: $sans;
+	font-weight: 700;
+}
+
+
+%link-highlight {
+	color: black;
+	background-color: $peach;
+	padding-left: 6px;
+	padding-right: 6px;
+	&:hover, &:focus {
+		color: black;
+	}
+}
+
+.navy {
+	color: white;
+	h1 {
+		color: $peach;
+	}
+	h2 {
+		color: #b3a395;
+	}
+}
+
+.grey {
+	color: #333333;
+
+	h1 {
+		color: $navy;
+	}
+	h2 {
+		color: #777777;
+		text-transform: none;
+	}
+}
+
+
+a {
+	color: inherit;
+	text-decoration: underline;
+	&:hover {
+		color: inherit;
+	}
+}
+
+footer {
+	a {
+		text-decoration: underline;
+		color: white;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+
+::-moz-selection {
+	background: black;
+	color: $peach;
+}
+
+::selection {
+	background: black;
+	color: $peach;
+}
+
+
+a.button, button, .button {
+
+
+	&:hover, &:focus {}
+}
